@@ -1,10 +1,9 @@
 <?php
 
-namespace Sogener\Core;
+namespace Sogener\Phpdocker\Core;
 
 use Dotenv\Dotenv;
 use PDO;
-
 
 class Dbconn
 {

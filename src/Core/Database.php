@@ -1,9 +1,8 @@
 <?php
 
-namespace Sogener\Core;
+namespace Sogener\Phpdocker\Core;
 
 use PDO;
-
 
 class Database
 {
@@ -23,6 +22,12 @@ class Database
 
     public function setData($level, $message, $context)
     {
+        if (!is_array($context) || !is_object($context)) {
+//            todo: Throw exception
+            echo 'Context must be array or object';
+            die();
+        }
+
         $context = implode(",", $context);
         $query = "INSERT INTO logs (level, message, context) VALUES (?, ?, ?)";
         $stmt = $this->pdo->prepare($query);

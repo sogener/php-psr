@@ -1,11 +1,10 @@
 <?php
 
-namespace Sogener\Psr;
+namespace Sogener\Phpdocker\Psr;
 
 use Psr\Log\AbstractLogger;
-use Sogener\Core\Database;
-use Sogener\Core\Dbconn;
-
+use Sogener\Phpdocker\Core\Database;
+use Sogener\Phpdocker\Core\Dbconn;
 
 class Three extends AbstractLogger
 {
